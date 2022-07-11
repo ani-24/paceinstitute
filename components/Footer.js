@@ -29,34 +29,34 @@ const Footer = () => {
             <h2 className="footer-title">Quick Links</h2>
             <ul className="list-none">
               <li>
-                <a href="/" className="footer-link">
-                  Home
-                </a>
+                <Link href="/">
+                  <a className="footer-link">Home</a>
+                </Link>
               </li>
               <li>
-                <a href="/courses" className="footer-link">
-                  Coruses
-                </a>
+                <Link href="/courses">
+                  <a className="footer-link">Coruses</a>
+                </Link>
               </li>
               <li>
-                <a href="/video-gallery" className="footer-link">
-                  Video Gallery
-                </a>
+                <Link href="/video-gallery">
+                  <a className="footer-link">Video Gallery</a>
+                </Link>
               </li>
               <li>
-                <a href="/image-gallery" className="footer-link">
-                  Image Gallery
-                </a>
+                <Link href="/image-gallery">
+                  <a className="footer-link">Image Gallery</a>
+                </Link>
               </li>
               <li>
-                <a href="/about-pace" className="footer-link">
-                  About Pace
-                </a>
+                <Link href="/about-pace">
+                  <a className="footer-link">About Pace</a>
+                </Link>
               </li>
               <li>
-                <a href="/admission-process" className="footer-link">
-                  Admission Process
-                </a>
+                <Link href="/admission-process">
+                  <a className="footer-link">Admission Process</a>
+                </Link>
               </li>
             </ul>
             <div>
