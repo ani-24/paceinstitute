@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="mt-12 bg-[url('/bg_pattern.jpg')]">
-      <div className="bg-gradient-to-b from-bgLight to-bgLight/20 pt-10 pb-4">
+      <div className="bg-gradient-to-b from-bgLight to-bgLight/40 pt-10 pb-4">
         <div className="container grid md:grid-cols-2 xl:grid-cols-4 gap-y-8 gap-x-4">
           <div className="px-8 leading-loose">
             <h2 className="footer-title">Address</h2>
@@ -129,7 +129,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="px-8 text-center py-4 bg-bgLight/20">
+      <div className="px-8 text-center py-4 bg-bgLight/40">
         Copyright © 2021 Pace Institute.
       </div>
     </div>
