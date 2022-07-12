@@ -176,7 +176,7 @@ export default function Home() {
     <>
       <Header />
       <div className="container mt-10">
-        <div className="lg:flex max-w-full">
+        <div className="lg:flex max-w-full items-center">
           <div className="relative max-w-lg mx-auto flex justify-center items-center w-[240px] h-[270px] lg:w-[320px] lg:h-[360px]">
             <Image
               src="/pratap_manish.webp"

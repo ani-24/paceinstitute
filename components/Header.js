@@ -2,15 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { XCircleIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [hidden, setHidden] = useState(true);
+  const [animateHeader, setAnimateHeader] = useState(false);
+  useEffect(() => {
+    const listener = () =>
+      window.scrollY > 10 ? setAnimateHeader(true) : setAnimateHeader(false);
+    window.addEventListener("scroll", listener);
+    return () => {
+      window.removeEventListener("scroll", listener);
+    };
+  }, []);
   return (
     <>
-      <div className="sticky top-0 left-0 z-40 bg-bg/90 backdrop-blur-[250px]">
+      <div
+        className={`sticky top-0 left-0 z-40 py-5 bg-transparent transition-all duration-200 ${
+          animateHeader && "bg-bg/90 !py-2 backdrop-blur-[250px]"
+        }`}
+      >
         <div className="container">
-          <div className="py-5 flex justify-between items-center">
+          <div className="flex justify-between items-center">
             <Link href="/">
               <a>
                 <Image
@@ -18,6 +31,7 @@ const Header = () => {
                   alt="Pace Logo"
                   height={60}
                   width={150}
+                  className="inline-block"
                 />
               </a>
             </Link>

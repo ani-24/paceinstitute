@@ -11,8 +11,9 @@ const Layout = ({ children }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         />
       </Head>
-      <main className="relative">{children}</main>
-      <Circles />
+      <main className="relative">
+        {children} <Circles />
+      </main>
     </>
   );
 };

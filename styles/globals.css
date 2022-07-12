@@ -57,7 +57,7 @@
     @apply h-[2px] w-full mx-auto bg-gray-300;
   }
   .container {
-    @apply max-w-[400px] sm:max-w-[90%] xl:max-w-[1240px] mx-auto;
+    @apply max-w-[90%] sm:max-w-[90%] xl:max-w-[1240px] mx-auto;
   }
   .section-title {
     @apply relative text-center pb-2 before:absolute before:h-[2px] before:w-[75px] before:bg-white before:bottom-0 before:left-1/2 before:-translate-x-1/2;
