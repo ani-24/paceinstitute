@@ -18,10 +18,12 @@ const Footer = () => {
             </p>
             <iframe
               className="mb-4 max-w-full lg:w-[320px] aspect-video"
+              title="Address 1"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14394.130711601798!2d85.157266!3d25.58721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf97f67e31741abb0!2sPACE%20Institute%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1628132403903!5m2!1sen!2sin"
             ></iframe>
             <iframe
               className="max-w-full lg:w-[320px] aspect-video"
+              title="Address 2"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d460512.0513559904!2d85.099725!3d25.613209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x231364db43a67516!2sPace%20Institute%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1628132450872!5m2!1sen!2sin"
             ></iframe>
           </div>

@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Circles from "./Circles";
+import Jumptotop from "./Jumptotop";
+import Wame from "./Wame";
 
 const Layout = ({ children }) => {
   return (
@@ -14,6 +16,8 @@ const Layout = ({ children }) => {
       <main className="relative">
         {children} <Circles />
       </main>
+      <Jumptotop />
+      <Wame />
     </>
   );
 };

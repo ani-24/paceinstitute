@@ -20,6 +20,19 @@ module.exports = {
         "in-expo": "cubic-bezier(.8,.13,.83,.67)",
         "out-expo": "cubic-bezier(.95,.95,.46,.98)",
       },
+      keyframes: {
+        moveDown: {
+          "0%": {
+            transform: "translateY(-75vh)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        moveDown: "moveDown 3s ease-out",
+      },
     },
   },
   plugins: [],

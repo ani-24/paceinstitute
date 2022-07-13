@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <div
         className={`sticky top-0 left-0 z-40 py-5 bg-transparent transition-all duration-200 ${
-          animateHeader && "bg-bg/90 !py-2 backdrop-blur-[250px]"
+          animateHeader && "bg-bg/90 backdrop-blur-[250px]"
         }`}
       >
         <div className="container">
@@ -29,7 +29,7 @@ const Header = () => {
                 <Image
                   src="/pace_logo.webp"
                   alt="Pace Logo"
-                  height={60}
+                  height={56.82}
                   width={150}
                   className="inline-block"
                 />
@@ -38,7 +38,7 @@ const Header = () => {
             <ul className="hidden list-none md:space-x-5 lg:flex">
               <li className="navItem">
                 <Link href="/">
-                  <a className=" text-primary">Home</a>
+                  <a className="text-primary">Home</a>
                 </Link>
               </li>
               <li className="navItem">
@@ -92,43 +92,55 @@ const Header = () => {
         }`}
       >
         <ul className="list-none">
-          <a
+          <li
             className="sidenav-link text-white bg-bgLight cursor-pointer"
             onClick={() => setHidden(true)}
           >
             <XCircleIcon height={20} width={20} className="inline mr-2" /> Close
             Navbar
-          </a>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              Home
-            </a>
-          </Link>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              Courses
-            </a>
-          </Link>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              Video Gallery
-            </a>
-          </Link>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              Image Gallery
-            </a>
-          </Link>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              About us
-            </a>
-          </Link>
-          <Link href="">
-            <a className="sidenav-link" onClick={() => setHidden(true)}>
-              Admission Process
-            </a>
-          </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Home
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/courses">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Courses
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/video-gallery">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Video Gallery
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/image-gallery">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Image Gallery
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                About us
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/admission-process">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Admission Process
+              </a>
+            </Link>
+          </li>
         </ul>
       </div>
     </>
