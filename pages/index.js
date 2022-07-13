@@ -174,7 +174,6 @@ export default function Home({ banner, youtube, testimonial }) {
     <>
       <Header />
       <Head>
-        <html lang="en" />
         <title>Pace Institute | Best English Institite in Patna</title>
         <meta
           name="description"
