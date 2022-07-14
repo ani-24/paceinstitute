@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +12,7 @@
     --clr-primary: 172deg 100% 37%;
     --clr-primary-dark: 172deg 100% 50%;
 
-    @apply bg-bg text-gray-300 font-text leading-loose text-xs sm:text-sm w-full overflow-x-hidden;
+    @apply bg-bg text-gray-300 font-body leading-loose text-xs sm:text-sm w-full overflow-x-hidden;
   }
 
   body {

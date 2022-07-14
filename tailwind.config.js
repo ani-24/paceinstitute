@@ -14,7 +14,7 @@ module.exports = {
         primaryDark: "hsl(var(--clr-primary-dark))",
       },
       fontFamily: {
-        text: ["Poppins"],
+        body: ["Poppins"],
       },
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(.8,.13,.83,.67)",
