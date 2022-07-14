@@ -8,6 +8,8 @@ import Footer from "./Footer";
 import Router from "next/router";
 import nProgress from "nprogress";
 
+import "nprogress/nprogress.css";
+
 const Layout = ({ children }) => {
   Router.events.on("routeChangeStart", (url) => {
     nProgress.start();
