@@ -8,7 +8,7 @@
     --clr-bg-light: 240deg 16% 17%;
 
     --clr-primary: 172deg 100% 37%;
-    --clr-primary-dark: 172deg 70% 50%;
+    --clr-primary-dark: 172deg 100% 50%;
 
     @apply bg-bg text-gray-300 font-text leading-loose text-xs sm:text-sm w-full overflow-x-hidden;
   }
@@ -54,7 +54,7 @@
     @apply text-gray-300 relative pb-1 after:absolute after:bottom-0 after:w-0 after:h-[1px] after:left-1/2 after:bg-primary after:transition-all after:duration-150 hover:after:w-3/4 hover:after:-translate-x-1/2;
   }
   .bar {
-    @apply h-[2px] w-full mx-auto bg-gray-300;
+    @apply h-[2px] w-full mx-auto bg-gray-400;
   }
   .container {
     @apply max-w-[90%] sm:max-w-[90%] xl:max-w-[1240px] mx-auto;
@@ -63,7 +63,7 @@
     @apply relative text-center pb-2 before:absolute before:h-[2px] before:w-[75px] before:bg-white before:bottom-0 before:left-1/2 before:-translate-x-1/2;
   }
   .sidenav-link {
-    @apply block w-full p-4 transition duration-150  text-gray-400 hover:bg-bgLight hover:text-gray-200 text-sm;
+    @apply block w-full p-4 transition duration-150  text-gray-400 hover:bg-bg-100 hover:text-gray-200 text-sm;
   }
   .body-link {
     @apply underline underline-offset-2 text-primary;
@@ -76,5 +76,12 @@
   }
   .footerIcon {
     @apply mr-2;
+  }
+  .course-desc p {
+    @apply mb-4;
+  }
+  .course-desc ol,
+  .course-desc ul {
+    @apply ml-4 space-y-3 mb-4 list-disc;
   }
 }

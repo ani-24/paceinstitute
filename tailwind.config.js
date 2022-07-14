@@ -9,9 +9,9 @@ module.exports = {
     extend: {
       colors: {
         bg: "hsl(var(--clr-bg))",
-        bgLight: "hsl(var(--clr-bg-light))",
+        "bg-100": "hsl(var(--clr-bg-light))",
         primary: "hsl(var(--clr-primary))",
-        primaryDark: "hsl(var(--clr-primar-dark))",
+        primaryDark: "hsl(var(--clr-primary-dark))",
       },
       fontFamily: {
         text: ["Poppins"],

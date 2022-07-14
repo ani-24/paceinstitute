@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { XCircleIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
@@ -15,6 +16,7 @@ const Header = () => {
       window.removeEventListener("scroll", listener);
     };
   }, []);
+  const router = useRouter();
   return (
     <>
       <div
@@ -38,37 +40,71 @@ const Header = () => {
             <ul className="hidden list-none md:space-x-5 lg:flex">
               <li className="navItem">
                 <Link href="/">
-                  <a className="text-primary">Home</a>
+                  <a className={router.pathname === "/" ? "text-primary" : ""}>
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li className="navItem">
+                <Link href="/courses">
+                  <a
+                    className={
+                      router.pathname === "/courses" ? "text-primary" : ""
+                    }
+                  >
+                    Courses
+                  </a>
                 </Link>
               </li>
               <li className="navItem">
                 <Link href="/">
-                  <a className="">Courses</a>
+                  <a
+                    className={
+                      router.pathname === "/video-gallery" ? "text-primary" : ""
+                    }
+                  >
+                    Video Gallery
+                  </a>
                 </Link>
               </li>
               <li className="navItem">
                 <Link href="/">
-                  <a className="">Video Gallery</a>
+                  <a
+                    className={
+                      router.pathname === "/image-gallery" ? "text-primary" : ""
+                    }
+                  >
+                    Image Gallery
+                  </a>
                 </Link>
               </li>
               <li className="navItem">
                 <Link href="/">
-                  <a className="">Image Gallery</a>
+                  <a
+                    className={
+                      router.pathname === "/about" ? "text-primary" : ""
+                    }
+                  >
+                    About Pace
+                  </a>
                 </Link>
               </li>
               <li className="navItem">
                 <Link href="/">
-                  <a className="">About Pace</a>
-                </Link>
-              </li>
-              <li className="navItem">
-                <Link href="/">
-                  <a className="">Admission Process</a>
+                  <a
+                    className={
+                      router.pathname === "/admissio-process"
+                        ? "text-primary"
+                        : ""
+                    }
+                  >
+                    Admission Process
+                  </a>
                 </Link>
               </li>
             </ul>
             <div
-              className="relative w-5 h-4 flex flex-col justify-between -translate-x-4 before:absolute before:h-10 before:w-10 before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:border before:border-gray-300 before:rounded-full lg:hidden"
+              className="relative w-6 h-5 flex flex-col justify-between -translate-x-4 before:absolute before:h-14 before:w-14 before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:border before:border-gray-400 before:rounded-full lg:hidden"
               onClick={() => setHidden(false)}
             >
               <div className="bar"></div>

@@ -2,8 +2,19 @@ import Head from "next/head";
 import Circles from "./Circles";
 import Jumptotop from "./Jumptotop";
 import Wame from "./Wame";
+import Header from "./Header";
+import Footer from "./Footer";
+
+import Router from "next/router";
+import nProgress from "nprogress";
 
 const Layout = ({ children }) => {
+  Router.events.on("routeChangeStart", (url) => {
+    nProgress.start();
+  });
+  Router.events.on("routeChangeComplete", (url) => {
+    nProgress.done();
+  });
   return (
     <>
       <Head>
@@ -14,7 +25,10 @@ const Layout = ({ children }) => {
         />
       </Head>
       <main className="relative">
-        {children} <Circles />
+        <Header />
+        {children}
+        <Footer />
+        <Circles />
       </main>
       <Jumptotop />
       <Wame />

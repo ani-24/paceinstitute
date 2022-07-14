@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="mt-12 bg-[url('/bg_pattern.jpg')]">
-      <div className="bg-gradient-to-b from-bgLight to-bgLight/40 pt-10 pb-4">
+      <div className="bg-gradient-to-b from-bg-100 to-bg-100/40 pt-10 pb-4">
         <div className="container grid md:grid-cols-2 xl:grid-cols-4 gap-y-8 gap-x-4">
           <div className="px-8 leading-loose">
             <h2 className="footer-title">Address</h2>
@@ -104,7 +104,7 @@ const Footer = () => {
             <h2 className="footer-title">Follow us on:</h2>
             <ul>
               <li>
-                <Link href="#">
+                <Link href="https://www.facebook.com/paceinstituteno.1/">
                   <a className="footer-link">
                     <i className="fab fa-facebook footerIcon"></i>{" "}
                     <span>Facebook</span>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="https://www.instagram.com/pratap.manish_pace.institute/">
                   <a className="footer-link">
                     <i className="fab fa-instagram footerIcon"></i>{" "}
                     <span>Instagram</span>
@@ -120,7 +120,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="https://www.youtube.com/PratapManishPACEInstitute">
                   <a className="footer-link">
                     <i className="fab fa-youtube footerIcon"></i>{" "}
                     <span>YouTube</span>
@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="px-8 text-center py-4 bg-bgLight/40">
+      <div className="px-8 text-center py-4 bg-bg-100/40">
         Copyright © 2021 Pace Institute.
       </div>
     </div>

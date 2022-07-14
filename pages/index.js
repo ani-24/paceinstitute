@@ -1,6 +1,5 @@
 import Head from "next/head";
-
-import Header from "../components/Header";
+import Link from "next/link";
 import Image from "next/image";
 
 import { PlayIcon } from "@heroicons/react/outline";
@@ -13,32 +12,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper";
-import Footer from "../components/Footer";
 import { client } from "../lib/client";
 import sort from "../lib/sort";
-
-const TestimonialData = [
-  {
-    name: "Abhishek Kumar",
-    text: "It is the best institute. Sir creates a good environment to learn English & many other activities that give benefit in GD and PI",
-  },
-  {
-    name: "Smriti Rani",
-    text: "It's a very good institute for Personality Development and spoken. I went there and learned many things. I loved it.",
-  },
-  {
-    name: "Kanishk Raj Singh",
-    text: "I am proud to be a first batch student of this institute when madam leaves BBC. MADAM ko mera pranam. Hope madam still remember me.",
-  },
-  {
-    name: "Manisha Kumari",
-    text: "I think PACE is one of the best institutes in India for spoken English, grammar, and the most important Personality Development courses... I have seen myself changed after joining this institution.",
-  },
-  {
-    name: "Aniket Kumar",
-    text: "A number of practice sessions along with daily group discussions and perfect grammar explaination turned to be very helpful in my fluency in English and I can see visibile progress in me. I can also not forget to mention the personality development lectures that was the cherry on cake. Thanks to PACE Institute.",
-  },
-];
 
 const HeroVideo = () => {
   return (
@@ -74,7 +49,7 @@ const YouTube = ({ youtube }) => {
           {youtube.map((video) => (
             <div
               key={video._id}
-              className="bg-bgLight px-5 py-8 drop-shadow-md mb-5 rounded-lg overflow-hidden w-full max-w-[500px] lg:max-w-none mx-auto"
+              className="bg-bg-100 px-5 py-8 drop-shadow-md mb-5 rounded-lg overflow-hidden w-full max-w-[500px] lg:max-w-none mx-auto"
             >
               <div
                 onClick={() => {
@@ -172,7 +147,6 @@ const Testimonial = ({ testimonial }) => {
 export default function Home({ banner, youtube, testimonial }) {
   return (
     <>
-      <Header />
       <Head>
         <title>Pace Institute | Best English Institite in Patna</title>
         <meta
@@ -195,20 +169,18 @@ export default function Home({ banner, youtube, testimonial }) {
             <p className="my-4 text-sm leading-loose text-gray-400">
               {banner.description}
             </p>
-            <a
-              href="#"
-              className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary"
-            >
-              <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
-              {banner.button}
-            </a>
+            <Link href="https://www.youtube.com/PratapManishPACEInstitute">
+              <a className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary">
+                <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
+                {banner.button}
+              </a>
+            </Link>
           </div>
         </div>
       </div>
       <HeroVideo />
       <YouTube youtube={youtube} />
       <Testimonial testimonial={testimonial} />
-      <Footer />
     </>
   );
 }
