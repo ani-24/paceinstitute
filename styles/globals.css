@@ -12,7 +12,7 @@
     --clr-primary: 172deg 100% 37%;
     --clr-primary-dark: 172deg 100% 50%;
 
-    @apply bg-bg text-gray-300 font-body leading-loose text-xs sm:text-sm w-full overflow-x-hidden;
+    @apply bg-bg text-gray-300 font-body leading-loose text-sm w-full overflow-x-hidden;
   }
 
   body {
