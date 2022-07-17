@@ -180,7 +180,7 @@ export default function Home({ banner, youtube, testimonial }) {
             <Link href="https://www.youtube.com/PratapManishPACEInstitute">
               <a className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary">
                 <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
-                Let's get started
+                Let&apos;s get started
               </a>
             </Link>
           </div>
