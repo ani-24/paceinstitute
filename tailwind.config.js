@@ -29,9 +29,27 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        "preloader-out": {
+          "0%": {
+            right: "0",
+          },
+          "100%": {
+            right: "-100%",
+          },
+        },
+        "preloader-in": {
+          "0%": {
+            left: "-100%",
+          },
+          "100%": {
+            left: "0",
+          },
+        },
       },
       animation: {
         moveDown: "moveDown 3s ease-out",
+        preloaderIn: "preloader-in 700ms ease-out",
+        preloaderOut: "preloader-out 700ms ease-out",
       },
     },
   },

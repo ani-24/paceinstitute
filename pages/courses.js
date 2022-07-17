@@ -30,7 +30,7 @@ const courses = ({ courses }) => {
               className="shadow-md rounded-xl overflow-hidden backdrop-blur-3xl h-full flex flex-col"
               key={course._id}
             >
-              <div className="p-8 bg-bg-100/40 flex-grow border-b border-b-white/5">
+              <div className="p-8 bg-bg-100 flex-grow border-b border-b-white/5">
                 <h2 className="mb-8 text-2xl">{course.title}</h2>
                 <div className="course-desc text-sm">
                   <PortableText blocks={course.description} />

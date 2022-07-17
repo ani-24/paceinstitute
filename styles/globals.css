@@ -86,4 +86,10 @@
   .course-desc ul {
     @apply ml-4 space-y-3 mb-4 list-disc;
   }
+  .preloader-show {
+    @apply !scale-y-100 !origin-bottom;
+  }
+  .preloader-hide {
+    @apply scale-y-0;
+  }
 }

@@ -34,6 +34,7 @@ const Header = () => {
                   height={56.82}
                   width={150}
                   className="inline-block"
+                  loading="lazy"
                 />
               </a>
             </Link>
@@ -57,7 +58,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/">
+                <Link href="/video-gallery">
                   <a
                     className={
                       router.pathname === "/video-gallery" ? "text-primary" : ""

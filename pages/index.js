@@ -165,14 +165,22 @@ export default function Home({ banner, youtube, testimonial }) {
             />
           </div>
           <div className="text-center mt-5 lg:w-1/2 lg:text-start">
-            <h1>{banner.title}</h1>
+            <h1>Why Learn English?</h1>
             <p className="my-4 text-sm leading-loose text-gray-400">
-              {banner.description}
+              English has become the leading international language. It has
+              developed over the period of more than 1,400 years. English
+              language has been updating itself with time from old English to
+              modern English with institutions like PACE working sincerely.
+              Modern English has been spreading around the world due to its
+              flexibility and adaptability. English has become the leading
+              language of international discourse and communication in many
+              regions and professional contexts such as science, navigation and
+              law
             </p>
             <Link href="https://www.youtube.com/PratapManishPACEInstitute">
               <a className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary">
                 <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
-                {banner.button}
+                Let's get started
               </a>
             </Link>
           </div>
@@ -186,12 +194,15 @@ export default function Home({ banner, youtube, testimonial }) {
 }
 
 export const getServerSideProps = async () => {
-  const banner = await client.fetch(`*[_type == "banner"][0]`);
   const youtube = await client.fetch(`*[_type == "youtube"]`);
   const testimonial = await client.fetch(`*[_type == "testimonial"]`);
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 1000);
+  });
   return {
     props: {
-      banner,
       youtube,
       testimonial,
     },
