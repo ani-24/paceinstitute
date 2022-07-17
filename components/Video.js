@@ -22,6 +22,7 @@ const Video = ({ video }) => {
             alt="YouTube video"
             layout="fill"
             objectFit="cover"
+            loading="lazy"
           />
           <PlayIcon
             height={50}
