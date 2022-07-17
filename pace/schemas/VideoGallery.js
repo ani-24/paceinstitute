@@ -1,5 +1,5 @@
 export default {
-  name: "video-gallery",
+  name: "videoGallery",
   title: "Video Gallery",
   type: "document",
   fields: [

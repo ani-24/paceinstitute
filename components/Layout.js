@@ -17,12 +17,10 @@ const Layout = ({ children }) => {
   Router.events.on("routeChangeStart", (url) => {
     nProgress.start();
     setLoading(true);
-    console.log(loading);
   });
   Router.events.on("routeChangeComplete", (url) => {
     nProgress.done();
     setLoading(false);
-    console.log(loading);
   });
   return (
     <>
