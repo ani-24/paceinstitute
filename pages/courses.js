@@ -32,8 +32,8 @@ const courses = () => {
                   <p>Online or Offline whatever students prefer</p>
                   <p>Only 20 students in a batch</p>
                   <ul>
-                    {course.items.map((item) => (
-                      <li>{item}</li>
+                    {course.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
                     ))}
                   </ul>
                   <p>
