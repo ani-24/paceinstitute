@@ -1,12 +1,8 @@
-import { client } from "../lib/client";
-import PortableText from "@sanity/block-content-to-react";
-
-import sort from "../lib/sort";
+import coursesData from "./db/coursesData";
 
 import Head from "next/head";
 
-const courses = ({ courses }) => {
-  sort(courses);
+const courses = () => {
   return (
     <>
       <Head>
@@ -17,7 +13,7 @@ const courses = ({ courses }) => {
         />
       </Head>
       <div className="mt-8 container grid gap-8 lg:grid-cols-2">
-        {courses.map((course) => {
+        {coursesData.map((course, index) => {
           if (parseInt(course.price)) {
             course.price = parseInt(course.price).toLocaleString("en-IN", {
               maximumFractionDigits: 0,
@@ -28,12 +24,24 @@ const courses = ({ courses }) => {
           return (
             <div
               className="shadow-md rounded-xl overflow-hidden backdrop-blur-3xl h-full flex flex-col"
-              key={course._id}
+              key={index}
             >
               <div className="p-8 bg-bg-100 flex-grow border-b border-b-white/5">
                 <h2 className="mb-8 text-2xl">{course.title}</h2>
                 <div className="course-desc text-sm">
-                  <PortableText blocks={course.description} />
+                  <p>Online or Offline whatever students prefer</p>
+                  <p>Only 20 students in a batch</p>
+                  <ul>
+                    {course.items.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                  <p>
+                    The full training is under the guidance of{" "}
+                    <strong>Mr. Pratap Manish</strong> (IIM alumni with more
+                    than 15 years of experience in multiple countries).
+                  </p>
+                  <p>Fee to be paid at the time of admission.</p>
                 </div>
               </div>
               <div className="p-4 bg-bg-100/50 flex justify-between items-center flex-wrap gap-2">
@@ -53,12 +61,3 @@ const courses = ({ courses }) => {
 };
 
 export default courses;
-
-export const getServerSideProps = async () => {
-  const courses = await client.fetch(`*[_type == "courses"]`);
-  return {
-    props: {
-      courses,
-    },
-  };
-};

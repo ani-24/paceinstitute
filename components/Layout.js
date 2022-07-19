@@ -5,23 +5,7 @@ import Wame from "./Wame";
 import Header from "./Header";
 import Footer from "./Footer";
 
-import Router from "next/router";
-import nProgress from "nprogress";
-
-import "nprogress/nprogress.css";
-import { useState } from "react";
-import Loading from "./Loading";
-
 const Layout = ({ children }) => {
-  const [loading, setLoading] = useState(false);
-  Router.events.on("routeChangeStart", (url) => {
-    nProgress.start();
-    setLoading(true);
-  });
-  Router.events.on("routeChangeComplete", (url) => {
-    nProgress.done();
-    setLoading(false);
-  });
   return (
     <>
       <Head>
@@ -37,7 +21,6 @@ const Layout = ({ children }) => {
         <Footer />
         <Circles />
       </main>
-      <Loading visibility={loading} />
       <Jumptotop />
       <Wame />
     </>

@@ -41,7 +41,11 @@ const Header = () => {
             <ul className="hidden list-none md:space-x-5 lg:flex">
               <li className="navItem">
                 <Link href="/">
-                  <a className={router.pathname === "/" ? "text-primary" : ""}>
+                  <a
+                    className={`navLink ${
+                      router.pathname === "/" ? "text-primary" : ""
+                    }`}
+                  >
                     Home
                   </a>
                 </Link>
@@ -49,9 +53,8 @@ const Header = () => {
               <li className="navItem">
                 <Link href="/courses">
                   <a
-                    className={
-                      router.pathname === "/courses" ? "text-primary" : ""
-                    }
+                    className={`navLink
+                      ${router.pathname === "/courses" ? "text-primary" : ""}`}
                   >
                     Courses
                   </a>
@@ -60,9 +63,12 @@ const Header = () => {
               <li className="navItem">
                 <Link href="/video-gallery">
                   <a
-                    className={
-                      router.pathname === "/video-gallery" ? "text-primary" : ""
-                    }
+                    className={`navLink
+                      ${
+                        router.pathname === "/video-gallery"
+                          ? "text-primary"
+                          : ""
+                      }`}
                   >
                     Video Gallery
                   </a>
@@ -71,9 +77,12 @@ const Header = () => {
               <li className="navItem">
                 <Link href="/">
                   <a
-                    className={
-                      router.pathname === "/image-gallery" ? "text-primary" : ""
-                    }
+                    className={`navLink
+                      ${
+                        router.pathname === "/image-gallery"
+                          ? "text-primary"
+                          : ""
+                      }`}
                   >
                     Image Gallery
                   </a>
@@ -82,9 +91,8 @@ const Header = () => {
               <li className="navItem">
                 <Link href="/">
                   <a
-                    className={
-                      router.pathname === "/about" ? "text-primary" : ""
-                    }
+                    className={`navLink
+                      ${router.pathname === "/about" ? "text-primary" : ""}`}
                   >
                     About Pace
                   </a>
@@ -93,11 +101,12 @@ const Header = () => {
               <li className="navItem">
                 <Link href="/">
                   <a
-                    className={
-                      router.pathname === "/admissio-process"
-                        ? "text-primary"
-                        : ""
-                    }
+                    className={`navLink
+                      ${
+                        router.pathname === "/admissio-process"
+                          ? "text-primary"
+                          : ""
+                      }`}
                   >
                     Admission Process
                   </a>

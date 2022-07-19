@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { PlayIcon } from "@heroicons/react/outline";
-import { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,9 +11,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper";
-import { client } from "../lib/client";
-import sort from "../lib/sort";
+
 import Video from "../components/Video";
+
+import youtube from "./db/youtube";
+import testimonial from "./db/testimonial";
 
 const HeroVideo = () => {
   return (
@@ -32,8 +33,7 @@ const HeroVideo = () => {
   );
 };
 
-const YouTube = ({ youtube }) => {
-  sort(youtube);
+const YouTube = () => {
   return (
     <>
       <section className="container mt-20">
@@ -45,8 +45,8 @@ const YouTube = ({ youtube }) => {
           </a>
         </p>
         <div className="lg:grid grid-cols-2 gap-10">
-          {youtube.map((video) => (
-            <Video video={video} key={video._id} />
+          {youtube.map((video, index) => (
+            <Video video={video} key={index} />
           ))}
         </div>
       </section>
@@ -54,8 +54,7 @@ const YouTube = ({ youtube }) => {
   );
 };
 
-const Testimonial = ({ testimonial }) => {
-  sort(testimonial);
+const Testimonial = () => {
   return (
     <div className="container mt-20">
       <h2 className="section-title">Feedback from Students</h2>
@@ -78,7 +77,7 @@ const Testimonial = ({ testimonial }) => {
   );
 };
 
-export default function Home({ banner, youtube, testimonial }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -121,19 +120,8 @@ export default function Home({ banner, youtube, testimonial }) {
         </div>
       </div>
       <HeroVideo />
-      <YouTube youtube={youtube} />
+      <YouTube />
       <Testimonial testimonial={testimonial} />
     </>
   );
 }
-
-export const getServerSideProps = async () => {
-  const youtube = await client.fetch(`*[_type == "youtube"]`);
-  const testimonial = await client.fetch(`*[_type == "testimonial"]`);
-  return {
-    props: {
-      youtube,
-      testimonial,
-    },
-  };
-};
