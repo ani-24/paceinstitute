@@ -1,4 +1,4 @@
-import coursesData from "./db/coursesData";
+import coursesData from "../data/coursesData";
 
 import Head from "next/head";
 

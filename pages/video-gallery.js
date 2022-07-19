@@ -1,5 +1,5 @@
 import Video from "../components/Video";
-import videos from "./db/videos";
+import videos from "../data/videos";
 
 const VideoGallery = () => {
   return (

@@ -14,8 +14,8 @@ import { Navigation, Pagination } from "swiper";
 
 import Video from "../components/Video";
 
-import youtube from "./db/youtube";
-import testimonial from "./db/testimonial";
+import youtube from "../data/youtube";
+import testimonial from "../data/testimonial";
 
 const HeroVideo = () => {
   return (
