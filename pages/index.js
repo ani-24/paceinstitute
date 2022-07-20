@@ -67,7 +67,7 @@ const Testimonial = () => {
         className="mt-10"
       >
         {testimonial.map((el, index) => (
-          <SwiperSlide key={el._id} className="text-center py-8 px-[10%]">
+          <SwiperSlide key={index} className="text-center py-8 px-[10%]">
             <h2 className="mb-4">{el.name}</h2>
             <p className="text-sm text-gray-400 leading-loose">{el.feedback}</p>
           </SwiperSlide>

@@ -52,8 +52,8 @@
   .overlay {
     @apply fixed h-screen w-full bg-black/80 backdrop-blur-md z-50 top-0 left-0 transition duration-700 ease-in-out;
   }
-  .navItem {
-    @apply text-gray-300 relative pb-1 after:absolute after:bottom-0 after:w-0 after:h-[1px] after:left-1/2 after:bg-primary after:transition-all after:duration-150 hover:after:w-3/4 hover:after:-translate-x-1/2;
+  .navLink {
+    @apply text-gray-300 pb-1 relative after:absolute after:bottom-0 after:w-0 after:h-[1px] after:left-1/2 after:bg-primary after:transition-all after:duration-150 hover:after:w-3/4 hover:after:-translate-x-1/2;
   }
   .bar {
     @apply h-[2px] w-full mx-auto bg-gray-400;

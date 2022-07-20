@@ -75,7 +75,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/">
+                <Link href="/image-gallery">
                   <a
                     className={`navLink
                       ${
