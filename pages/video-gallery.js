@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Video from "../components/Video";
 import videos from "../data/videos";
 

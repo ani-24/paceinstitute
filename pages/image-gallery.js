@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 import { LightBox } from "react-lightbox-pack";
 import "react-lightbox-pack/dist/index.css";
