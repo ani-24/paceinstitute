@@ -78,7 +78,7 @@ const ImageGallery = () => {
               lightBoxHandler(true, index);
             }}
           >
-            <img src={img.image} alt={img.alt} />
+            <img src={img.image} alt={img.alt} loading="lazy" />
           </div>
         </div>
       ))}
