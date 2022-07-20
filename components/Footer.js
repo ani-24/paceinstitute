@@ -101,7 +101,7 @@ const Footer = () => {
             <h2 className="footer-title">Follow us on:</h2>
             <ul>
               <li>
-                <Link href="https://www.facebook.com/paceinstituteno.1/">
+                <Link href="https://www.facebook.com/paceinstitute.co.in/">
                   <a className="footer-link">
                     <i className="fab fa-facebook footerIcon"></i>{" "}
                     <span>Facebook</span>
@@ -109,7 +109,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://www.instagram.com/pratap.manish_pace.institute/">
+                <Link href="https://www.instagram.com/pratap.manish_english/?igshid=YmMyMTA2M2Y%3D">
                   <a className="footer-link">
                     <i className="fab fa-instagram footerIcon"></i>{" "}
                     <span>Instagram</span>

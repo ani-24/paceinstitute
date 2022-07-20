@@ -89,7 +89,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/">
+                <Link href="/about">
                   <a
                     className={`navLink
                       ${router.pathname === "/about" ? "text-primary" : ""}`}
@@ -176,7 +176,7 @@ const Header = () => {
           <li>
             <Link href="/about">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
-                About us
+                About Pace
               </a>
             </Link>
           </li>

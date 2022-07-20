@@ -5,54 +5,54 @@ import "react-lightbox-pack/dist/index.css";
 
 const images = [
   {
-    image: "img1.jpg",
+    image: "img1.webp",
     alt: "Image 1",
   },
   {
-    image: "img2.jpg",
+    image: "img2.webp",
     alt: "Image 2",
   },
   {
-    image: "img3.jpg",
+    image: "img3.webp",
     alt: "Image 3",
   },
   {
-    image: "img4.jpg",
+    image: "img4.webp",
     alt: "Image 4",
   },
 
   {
-    image: "img6.jpg",
+    image: "img6.webp",
     alt: "Image 6",
   },
   {
-    image: "img7.jpg",
+    image: "img7.webp",
     alt: "Image 7",
   },
   {
-    image: "img8.jpg",
+    image: "img8.webp",
     alt: "Image 8",
   },
 
   {
-    image: "img10.jpg",
+    image: "img10.webp",
     alt: "Image 10",
   },
 
   {
-    image: "img11.jpg",
+    image: "img11.webp",
     alt: "Image 11",
   },
   {
-    image: "img12.jpeg",
+    image: "img12.webp",
     alt: "Image 12",
   },
   {
-    image: "img5.jpg",
+    image: "img5.webp",
     alt: "Image 5",
   },
   {
-    image: "img9.jpeg",
+    image: "img9.webp",
     alt: "Image 9",
   },
 ];
