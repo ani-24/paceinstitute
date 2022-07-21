@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
 import { LightBox } from "react-lightbox-pack";
 import "react-lightbox-pack/dist/index.css";
@@ -78,16 +79,24 @@ const ImageGallery = () => {
       <div className="container grid gap-12 lg:grid-cols-2 mt-12">
         {images.map((img, index) => (
           <div
-            className="flex justify-center items-center max-w-[500px] mx-auto"
+            className="flex justify-center items-center h-full w-full max-w-[500px] mx-auto"
             key={index}
           >
             <div
-              className="border-b-8 border-primary"
+              className="relative border-b-8 border-primary w-full h-full cursor-pointer"
               onClick={() => {
                 lightBoxHandler(true, index);
               }}
             >
-              <img src={img.image} alt={img.alt} loading="lazy" />
+              <Image
+                layout="responsive"
+                width={500}
+                height={300}
+                src={`/${img.image}`}
+                alt={img.alt}
+                objectFit="cover"
+                loading="lazy"
+              />
             </div>
           </div>
         ))}

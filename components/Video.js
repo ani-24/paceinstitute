@@ -13,7 +13,7 @@ const Video = ({ video }) => {
             setModalVisible(true);
             setModalVideo(video.link.split("https://youtu.be/")[1]);
           }}
-          className="relative aspect-video rounded-lg overflow-hidden flex justify-center items-center before:absolute before:h-0 before:w-0 before:bg-bg/90 before:rounded-full before:z-10 before:cursor-pointer before:transition-all before:duration-700 before:ease-in-out hover:before:h-[700px] hover:before:w-[700px]"
+          className="relative aspect-video rounded-lg overflow-hidden flex justify-center items-center before:absolute before:h-0 before:w-0 before:bg-bg/90 before:rounded-full before:z-10 cursor-pointer before:transition-all before:duration-700 before:ease-in-out hover:before:h-[700px] hover:before:w-[700px]"
         >
           <Image
             src={`https://i.ytimg.com/vi/${

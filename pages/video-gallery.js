@@ -13,8 +13,8 @@ const VideoGallery = () => {
         />
       </Head>
       <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {videos.map((video) => (
-          <Video video={video} key={video._id} />
+        {videos.map((video, index) => (
+          <Video video={video} key={index} />
         ))}
       </div>
     </>
