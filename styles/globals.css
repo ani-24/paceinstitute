@@ -108,7 +108,8 @@
   .about-section ol {
     @apply ml-4 list-disc;
   }
-  .about-title {
-    @apply text-2xl md:text-3xl relative inline-block pb-4 mb-8 before:h-1 before:w-3/4 before:bg-primary before:absolute before:bottom-0 before:left-0;
+  .about-title,
+  .admission-process-title {
+    @apply text-2xl md:text-3xl relative inline-block pb-2 mb-8 before:h-1 before:w-3/4 before:bg-primary before:absolute before:bottom-0 before:left-0;
   }
 }

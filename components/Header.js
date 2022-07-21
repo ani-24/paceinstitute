@@ -99,16 +99,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/">
+                <Link href="/admission-details">
                   <a
                     className={`navLink
                       ${
-                        router.pathname === "/admissio-process"
+                        router.pathname === "/admission-details"
                           ? "text-primary"
                           : ""
                       }`}
                   >
-                    Admission Process
+                    Admission Details
                   </a>
                 </Link>
               </li>
@@ -181,9 +181,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/admission-process">
+            <Link href="/admission-details">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
-                Admission Process
+                Admission Details
               </a>
             </Link>
           </li>
