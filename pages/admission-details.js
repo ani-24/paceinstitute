@@ -34,7 +34,7 @@ const AdmissionProcess = () => {
       </div>
       <div>
         <h1 className="admission-process-title">Pay Via QR Code</h1>
-        <div className="relative w-[400px] aspect-square">
+        <div className="relative w-full max-w-[400px] aspect-square">
           <Image src="/qr-code.jpeg" alt="Payment QR Code" layout="fill" />
         </div>
       </div>
