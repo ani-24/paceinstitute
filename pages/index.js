@@ -40,9 +40,9 @@ const YouTube = () => {
         <h2 className="section-title">YouTube</h2>
         <p className="text-center text-sm my-8">
           Learn for free on{" "}
-          <a href="#" className="body-link">
-            YouTube
-          </a>
+          <Link href="https://www.youtube.com/PratapManishPACEInstitute">
+            <a className="body-link">YouTube</a>
+          </Link>
         </p>
         <div className="lg:grid grid-cols-2 gap-10">
           {youtube.map((video, index) => (
