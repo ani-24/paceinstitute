@@ -1,14 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Wame = () => {
   return (
     <div className="fixed left-5 bottom-5 z-50 animate-moveDown">
-      <Image
-        src="/whatsapp-logo.svg"
-        alt="Whatsapp us"
-        height={50}
-        width={50}
-      />
+      <Link
+        href={`https://wa.me/+919334314161?text=${"Hello, I want to enquire for the admission".replace(
+          / /g,
+          "%20"
+        )}`}
+      >
+        <a>
+          <Image
+            src="/whatsapp-logo.svg"
+            alt="Whatsapp us"
+            height={50}
+            width={50}
+          />
+        </a>
+      </Link>
     </div>
   );
 };
