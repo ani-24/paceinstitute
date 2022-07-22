@@ -76,7 +76,12 @@ const Footer = () => {
             <h2 className="footer-title">Contact us</h2>
             <ul className="list-none">
               <li>
-                <Link href="">
+                <Link
+                  href={`https://wa.me/+919334314161?text=${"Hello, I want to enquire for the admission".replace(
+                    / /g,
+                    "%20"
+                  )}`}
+                >
                   <a className="footer-link">
                     <i className="fab fa-whatsapp footerIcon"></i>{" "}
                     <span>9334314161</span>
