@@ -112,4 +112,10 @@
   .admission-process-title {
     @apply text-2xl md:text-3xl relative inline-block pb-2 mb-8 before:h-1 before:w-3/4 before:bg-primary before:absolute before:bottom-0 before:left-0;
   }
+  .form-label {
+    @apply block uppercase;
+  }
+  .form-input {
+    @apply bg-transparent border-b-[1px] border-b-[#ffffff40] outline-none text-sm p-2 mb-4 w-80 transition-all duration-100 focus:border-b-[#ffffff80];
+  }
 }

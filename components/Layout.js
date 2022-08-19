@@ -4,6 +4,7 @@ import Jumptotop from "./Jumptotop";
 import Wame from "./Wame";
 import Header from "./Header";
 import Footer from "./Footer";
+import Enquiry from "./Enquiry";
 
 const Layout = ({ children }) => {
   return (
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
       </main>
       <Jumptotop />
       <Wame />
+      <Enquiry />
     </>
   );
 };
