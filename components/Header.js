@@ -113,7 +113,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/">
+                <Link href="https://pacecommerce.vercel.app/">
                   <a className={`navLink`}>PACE Commerce</a>
                 </Link>
               </li>
@@ -193,7 +193,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="https://pacecommerce.vercel.app/">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
                 PACE Commerce
               </a>
