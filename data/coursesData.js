@@ -1,6 +1,6 @@
 const coursesData = [
   {
-    title: "Guaranteed Overall English Course",
+    title: "Guaranteed Overall English course Basic to Advance",
     items: [
       "Full grammar from basic to advance.",
       "Descriptive Writing.",
@@ -18,7 +18,7 @@ const coursesData = [
     price: "20000",
   },
   {
-    title: "Overall Guaranteed English Course IELTS / TOEFL",
+    title: "Middle to Advance IELTS/TOEFL training",
     items: [
       "Full grammar from basic to advance",
       "Descriptive Emphatic Writing",
