@@ -34,7 +34,7 @@ const Header = () => {
                   height={56.82}
                   width={150}
                   className="inline-block"
-                  loading="lazy"
+                  priority
                 />
               </a>
             </Link>
