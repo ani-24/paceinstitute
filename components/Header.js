@@ -113,7 +113,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="https://pacecommerce.vercel.app/">
+                <Link href="https://commerceclasses.co.in/">
                   <a className={`navLink`}>PACE Commerce</a>
                 </Link>
               </li>

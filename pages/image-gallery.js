@@ -56,6 +56,10 @@ const images = [
     image: "img9.webp",
     alt: "Image 9",
   },
+  {
+    image: "img13.webp",
+    alt: "Image 13",
+  },
 ];
 
 const ImageGallery = () => {

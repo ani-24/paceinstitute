@@ -17,6 +17,9 @@ import Video from "../components/Video";
 import youtube from "../data/youtube";
 import testimonial from "../data/testimonial";
 
+import { gsap, TweenMax } from "gsap";
+import { useEffect, useRef } from "react";
+
 const HeroVideo = () => {
   return (
     <section className="container mt-20">
@@ -78,6 +81,19 @@ const Testimonial = () => {
 };
 
 export default function Home() {
+  const titleRef = useRef(null);
+  useEffect(() => {
+    // let ctx = gsap.context(() => {
+    //   gsap.to(".title", {
+    //     y: 100,
+    //   });
+    // }, titleRef);
+
+    // return () => ctx.revert();
+    gsap.from(titleRef, {
+      y: 100,
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -102,7 +118,9 @@ export default function Home() {
             />
           </div>
           <div className="text-center mt-5 lg:w-1/2 lg:text-start">
-            <h1>Why Learn English?</h1>
+            <h1 ref={titleRef} className="title">
+              Why Learn English?
+            </h1>
             <p className="my-4 text-sm leading-loose text-gray-400">
               English has become the leading international language. It has
               developed over the period of more than 1,400 years. English
