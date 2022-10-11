@@ -118,4 +118,16 @@
   .form-input {
     @apply bg-transparent border-b-[1px] border-b-[#ffffff40] outline-none text-sm p-2 mb-4 w-80 transition-all duration-100 focus:border-b-[#ffffff80];
   }
+  .row {
+    @apply grid grid-cols-4;
+  }
+  .table-cell {
+    @apply text-center border-b border-gray-500 px-1 py-8;
+  }
+  .table-heading {
+    @apply font-bold text-white;
+  }
+  .words-input {
+    @apply w-full mb-0;
+  }
 }

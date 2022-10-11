@@ -113,6 +113,20 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
+                <Link href="/study-material">
+                  <a
+                    className={`navLink
+                      ${
+                        router.pathname === "/study-material"
+                          ? "text-primary"
+                          : ""
+                      }`}
+                  >
+                    Study Material
+                  </a>
+                </Link>
+              </li>
+              <li className="navItem">
                 <Link href="https://commerceclasses.co.in/">
                   <a className={`navLink`}>PACE Commerce</a>
                 </Link>

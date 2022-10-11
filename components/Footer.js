@@ -57,6 +57,16 @@ const Footer = () => {
                   <a className="footer-link">Admission Process</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/study-material">
+                  <a className="footer-link">Study Material</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/admin-panel">
+                  <a className="footer-link">Admin Panel</a>
+                </Link>
+              </li>
             </ul>
             <div>
               <h2 className="footer-title">Download Our App:</h2>
