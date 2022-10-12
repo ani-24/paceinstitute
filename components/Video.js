@@ -43,7 +43,7 @@ const Video = ({ video }) => {
         }}
       ></div>
       <div
-        className={`fixed h-14 w-14 text-3xl rounded-full md:h-10 md:w-10 md:text-2xl bg-red-600 flex justify-center items-center text-white top-10 right-5 z-[80] transition duration-700 cursor-default ${
+        className={`modal-cross ${
           modalVisible
             ? "opacity-1 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -56,7 +56,7 @@ const Video = ({ video }) => {
         &times;
       </div>
       <div
-        className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] w-4/5 max-w-[1000px] aspect-video transition-all duration-500 ${
+        className={`modal ${
           modalVisible
             ? "opacity-1 pointer-events-auto"
             : "opacity-0 pointer-events-none"

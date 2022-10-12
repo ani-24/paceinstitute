@@ -35,6 +35,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI);
   }
   let words = await Words.find();
+  words = words.sort((a, b) => a.mainWord.localeCompare(b.v1));
   return {
     props: { words: JSON.parse(JSON.stringify(words)) },
   };
