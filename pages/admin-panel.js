@@ -1,28 +1,25 @@
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import axios from "axios";
 
+// const prisma = new PrismaClient();
+import useSWR from "swr";
+
 const AdminPanel = () => {
+  const router = useRouter();
   const [modalVisible, setModalVisible] = useState(false);
-  const inputContainerRef = useRef(null);
 
-  const [wordsArr, setWordsArr] = useState(null);
+  const fetcher = async (url) => await axios.get(url).then((res) => res.data);
 
-  const fetchWords = () => {
-    fetch("/api/words")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setWordsArr(data);
-      });
-  };
-
-  useEffect(() => {
-    fetchWords();
-  }, []);
+  const { data, error } = useSWR("/api/words", fetcher);
+  if (data) {
+    data.forEach((el) => {
+      console.log(el.id);
+    });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,7 +35,7 @@ const AdminPanel = () => {
     e.target.v2.value = "";
     e.target.v3.value = "";
     setModalVisible(false);
-    fetchWords();
+    router.reload(window.location.pathname);
   };
   return (
     <>
@@ -60,15 +57,15 @@ const AdminPanel = () => {
               <i className="fa-solid fa-plus"></i>
             </div>
           </div>
-          {wordsArr?.map((index, el) => (
-            <div key={el?.id} className="row">
-              <div className="table-cell">{el?.mainWord}</div>
-              <div className="table-cell">{el?.hindi}</div>
-              <div className="table-cell">{el?.v2}</div>
-              <div className="table-cell">{el?.v3}</div>
-            </div>
-          ))}
-          {console.log(wordsArr?.map((el) => console.log(el)))}
+          {data &&
+            data.map((el) => (
+              <div key={el?.id} className="row">
+                <div className="table-cell">{el?.mainWord}</div>
+                <div className="table-cell">{el?.hindi}</div>
+                <div className="table-cell">{el?.v2}</div>
+                <div className="table-cell">{el?.v3}</div>
+              </div>
+            ))}
         </div>
       </div>
       <div
@@ -111,24 +108,28 @@ const AdminPanel = () => {
                 className="form-input words-input"
                 placeholder="Main Word"
                 name="mainWord"
+                required
               />
               <input
                 type="text"
                 className="form-input words-input"
                 placeholder="Hindi Meaning"
                 name="hindi"
+                required
               />
               <input
                 type="text"
                 className="form-input words-input"
                 placeholder="V2"
                 name="v2"
+                required
               />
               <input
                 type="text"
                 className="form-input words-input"
                 placeholder="V3"
                 name="v3"
+                required
               />
             </div>
             <div className="w-full pt-8 pb-4 flex justify-center items-center">
@@ -153,3 +154,8 @@ const AdminPanel = () => {
 };
 
 export default AdminPanel;
+
+// export async function handle(req, res) {
+//   const posts = await prisma.post.findMany();
+//   res.json(posts);
+// }
