@@ -1,42 +1,9 @@
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
-import { useRouter } from "next/router";
 
-import { useEffect, useState } from "react";
-
-import axios from "axios";
-
-// const prisma = new PrismaClient();
-import useSWR from "swr";
+import { useState } from "react";
 
 const AdminPanel = () => {
-  const router = useRouter();
   const [modalVisible, setModalVisible] = useState(false);
-
-  const fetcher = async (url) => await axios.get(url).then((res) => res.data);
-
-  const { data, error } = useSWR("/api/words", fetcher);
-  if (data) {
-    data.forEach((el) => {
-      console.log(el.id);
-    });
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post("/api/words", {
-      id: Date.now(),
-      mainWord: e.target.mainWord.value,
-      hindi: e.target.hindi.value,
-      v2: e.target.v2.value,
-      v3: e.target.v3.value,
-    });
-    e.target.mainWord.value = "";
-    e.target.hindi.value = "";
-    e.target.v2.value = "";
-    e.target.v3.value = "";
-    setModalVisible(false);
-    router.reload(window.location.pathname);
-  };
   return (
     <>
       <div className="container mt-12 text-sm md:text-base">
