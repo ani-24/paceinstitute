@@ -137,7 +137,7 @@ const UpdateForm = ({ word }) => {
   );
 };
 
-const index = ({ words }) => {
+const Index = ({ words }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalEl, setModalEl] = useState(null);
 
@@ -150,7 +150,7 @@ const index = ({ words }) => {
         v2: word.v2,
         v3: word.v3,
       })
-      .then(() => router.reload());
+      .then(() => Router.reload());
   };
 
   return (
@@ -238,7 +238,7 @@ const index = ({ words }) => {
   );
 };
 
-export default index;
+export default Index;
 
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {
