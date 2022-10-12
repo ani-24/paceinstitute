@@ -102,7 +102,7 @@ const AdminPanel = () => {
             Add a Word
           </p>
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-6 my-4">
+            <div className="grid md:grid-cols-2 gap-6 my-4">
               <input
                 type="text"
                 className="form-input words-input"
