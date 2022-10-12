@@ -10,139 +10,137 @@ import {
 } from "@heroicons/react/outline";
 import axios from "axios";
 
-const AddForm = () => {
-  const router = useRouter();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("/api/addWord", {
-        mainWord: e.target.mainWord.value,
-        hindi: e.target.hindi.value,
-        v2: e.target.v2.value,
-        v3: e.target.v3.value,
-      })
-      .then(() => {
-        e.target.mainWord.value = "";
-        e.target.hindi.value = "";
-        e.target.v2.value = "";
-        e.target.v3.value = "";
-        router.reload();
-      });
-  };
-  return (
-    <>
-      <p className="font-bold uppercase my-5 text-lg text-white">Add Word:</p>
-      <form onSubmit={handleSubmit}>
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="Main Word*"
-            name="mainWord"
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="Hindi*"
-            name="hindi"
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="2nd Form (V2)*"
-            name="v2"
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="3rd Form (V3)*"
-            name="v3"
-          />
-        </div>
-        <div className="w-full flex justify-center">
-          <button
-            type="submit"
-            className="flex items-center bg-primary text-bg py-1 px-6 rounded-full"
-          >
-            Add <PlusCircleIcon height={15} width={15} className="ml-2" />
-          </button>
-        </div>
-      </form>
-    </>
-  );
-};
-
-const UpdateForm = ({ word }) => {
-  const router = useRouter();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("/api/updateWord", {
-        _id: word._id,
-        mainWord: e.target.mainWord.value,
-        hindi: e.target.hindi.value,
-        v2: e.target.v2.value,
-        v3: e.target.v3.value,
-      })
-      .then(() => {
-        e.target.mainWord.value = "";
-        e.target.hindi.value = "";
-        e.target.v2.value = "";
-        e.target.v3.value = "";
-        router.reload();
-      });
-  };
-  return (
-    <>
-      <p className="font-bold uppercase my-5 text-lg text-white">Update:</p>
-      <form onSubmit={handleSubmit}>
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="Main Word*"
-            name="mainWord"
-            defaultValue={word.mainWord}
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="Hindi*"
-            name="hindi"
-            defaultValue={word.hindi}
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="2nd Form (V2)*"
-            name="v2"
-            defaultValue={word.v2}
-          />
-          <input
-            type="text"
-            className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
-            placeholder="3rd Form (V3)*"
-            name="v3"
-            defaultValue={word.v3}
-          />
-        </div>
-        <div className="w-full flex justify-center">
-          <button
-            type="submit"
-            className="flex items-center bg-primary text-bg py-1 px-6 rounded-full"
-          >
-            Update <PencilAltIcon height={15} width={15} className="ml-2" />
-          </button>
-        </div>
-      </form>
-    </>
-  );
-};
-
 const index = ({ words }) => {
   const router = useRouter();
   const [modalVisible, setModalVisible] = useState(false);
   const [modalEl, setModalEl] = useState(null);
+
+  const AddForm = () => {
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      axios
+        .post("/api/addWord", {
+          mainWord: e.target.mainWord.value,
+          hindi: e.target.hindi.value,
+          v2: e.target.v2.value,
+          v3: e.target.v3.value,
+        })
+        .then(() => {
+          e.target.mainWord.value = "";
+          e.target.hindi.value = "";
+          e.target.v2.value = "";
+          e.target.v3.value = "";
+          router.reload();
+        });
+    };
+    return (
+      <>
+        <p className="font-bold uppercase my-5 text-lg text-white">Add Word:</p>
+        <form onSubmit={handleSubmit}>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="Main Word*"
+              name="mainWord"
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="Hindi*"
+              name="hindi"
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="2nd Form (V2)*"
+              name="v2"
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="3rd Form (V3)*"
+              name="v3"
+            />
+          </div>
+          <div className="w-full flex justify-center">
+            <button
+              type="submit"
+              className="flex items-center bg-primary text-bg py-1 px-6 rounded-full"
+            >
+              Add <PlusCircleIcon height={15} width={15} className="ml-2" />
+            </button>
+          </div>
+        </form>
+      </>
+    );
+  };
+
+  const UpdateForm = ({ word }) => {
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      axios
+        .post("/api/updateWord", {
+          _id: word._id,
+          mainWord: e.target.mainWord.value,
+          hindi: e.target.hindi.value,
+          v2: e.target.v2.value,
+          v3: e.target.v3.value,
+        })
+        .then(() => {
+          e.target.mainWord.value = "";
+          e.target.hindi.value = "";
+          e.target.v2.value = "";
+          e.target.v3.value = "";
+          router.reload();
+        });
+    };
+    return (
+      <>
+        <p className="font-bold uppercase my-5 text-lg text-white">Update:</p>
+        <form onSubmit={handleSubmit}>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="Main Word*"
+              name="mainWord"
+              defaultValue={word.mainWord}
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="Hindi*"
+              name="hindi"
+              defaultValue={word.hindi}
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="2nd Form (V2)*"
+              name="v2"
+              defaultValue={word.v2}
+            />
+            <input
+              type="text"
+              className="bg-bg-100 border-none outline-none py-3 px-6 text-white"
+              placeholder="3rd Form (V3)*"
+              name="v3"
+              defaultValue={word.v3}
+            />
+          </div>
+          <div className="w-full flex justify-center">
+            <button
+              type="submit"
+              className="flex items-center bg-primary text-bg py-1 px-6 rounded-full"
+            >
+              Update <PencilAltIcon height={15} width={15} className="ml-2" />
+            </button>
+          </div>
+        </form>
+      </>
+    );
+  };
 
   const deleteWord = (word) => {
     axios
