@@ -5,7 +5,7 @@ const StudyMaterial = ({ words }) => {
   return (
     <div className="container mt-12 text-sm md:text-base">
       <div>
-        <div className="row">
+        <div className="row sticky top-28 backdrop-blur-lg z-10">
           <div className="table-cell table-heading">Main Word</div>
           <div className="table-cell table-heading">Hindi Meaning</div>
           <div className="table-cell table-heading">

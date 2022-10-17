@@ -183,7 +183,7 @@ const Index = ({ words }) => {
                   setModalVisible(true);
                   setModalEl(<UpdateForm word={el} />);
                 }}
-                className="top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8 flex justify-center items-center bg-yellow-600 absolute rounded-full"
+                className="cursor-pointer top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8 flex justify-center items-center bg-yellow-600 absolute rounded-full"
               >
                 <PencilAltIcon height={15} width={15} />
               </div>
@@ -195,7 +195,7 @@ const Index = ({ words }) => {
                 onClick={() => {
                   deleteWord(el);
                 }}
-                className="top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 h-8 w-8 flex justify-center items-center bg-red-500 absolute rounded-full"
+                className="cursor-pointer top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 h-8 w-8 flex justify-center items-center bg-red-500 absolute rounded-full"
               >
                 <TrashIcon height={15} width={15} />
               </div>
