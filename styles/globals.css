@@ -136,4 +136,7 @@
   .modal {
     @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] w-4/5 max-w-[1000px] aspect-video transition-all duration-500 bg-bg;
   }
+  .admin-input {
+    @apply w-full rounded-lg bg-bg-100 outline-none px-6 py-3 shadow-lg mb-3;
+  }
 }

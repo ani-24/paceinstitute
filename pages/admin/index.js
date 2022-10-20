@@ -1,7 +1,10 @@
 import Words from "../../models/Words";
 import mongoose from "mongoose";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Router from "next/router";
+import { getCookie } from "cookies-next";
+
+import Cookies from "js-cookie";
 
 import {
   PlusCircleIcon,
@@ -140,6 +143,13 @@ const UpdateForm = ({ word }) => {
 const Index = ({ words }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalEl, setModalEl] = useState(null);
+
+  useEffect(() => {
+    const cookie = Cookies.get("token");
+    if (!cookie) {
+      Router.push("/admin/login");
+    }
+  }, []);
 
   const deleteWord = (word) => {
     axios
