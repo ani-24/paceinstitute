@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 
 import jwt from "jsonwebtoken";
 
-const login = () => {
+const Login = () => {
   const [wrong, setWrong] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -73,4 +73,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
