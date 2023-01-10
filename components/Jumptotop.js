@@ -20,8 +20,8 @@ const Jumptotop = () => {
   }, []);
   return (
     <div
-      className={`fixed bottom-5 right-5 h-14 w-14 z-40 bg-primary hover:bg-primaryDark transition duration-300 cursor-pointer flex justify-center items-center text-bg shadow-2xl rounded-md ${
-        !visibility && "opacity-0 pointer-events-none"
+      className={`fixed bottom-5 right-5 h-14 w-14 z-40 bg-primary hover:bg-primaryDark transition-all duration-300 cursor-pointer flex justify-center items-center text-bg shadow-2xl rounded-md ${
+        !visibility && "opacity-0 pointer-events-none -bottom-full"
       }`}
       onClick={scrollToTop}
     >
