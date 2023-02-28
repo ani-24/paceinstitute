@@ -127,8 +127,8 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="https://commerceclasses.co.in/">
-                  <a className={`navLink`}>PACE Commerce</a>
+                <Link href="/books">
+                  <a className={`navLink`}>Books</a>
                 </Link>
               </li>
             </ul>
