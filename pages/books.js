@@ -8,7 +8,7 @@ const books = () => {
   return (
     <div className="container md:mt-20">
       <div className="lg:flex">
-        <div className="px-[10%] mb-8 flex justify-center items-center">
+        <div className="px-[10%] mb-8 lg:pl-0 flex justify-center items-center">
           <div className="max-w-[300px] lg:max-w-full">
             <Image
               src={BookCover}
