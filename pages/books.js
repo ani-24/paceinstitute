@@ -28,7 +28,7 @@ const books = () => {
             language
           </p>
           <h3 className="mb-5">What's inside?</h3>
-          <ul className="mb-5 md:mb-10 list-disc list-inside">
+          <ul className="mb-5 md:mb-10 list-disc list-inside text-start">
             <li>Sentence structures to explain the whole grammar</li>
             <li>Position and uses of different parts of speech</li>
             <li>List of words and their functions as parts of speech</li>
