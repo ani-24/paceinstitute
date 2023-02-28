@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { PaperAirplaneIcon } from "@heroicons/react/solid";
+import { PaperAirplaneIcon, XIcon } from "@heroicons/react/solid";
 
 import emailjs from "emailjs-com";
 
@@ -52,6 +52,14 @@ const Enquiry = () => {
             : "opacity-0 pointer-events-none -left-full"
         }`}
       >
+        <div
+          className="h-12 w-12 rounded-full flex justify-center items-center text-white bg-red-500 absolute right-0 top-0 transform translate-x-1/2 -translate-y-1/2 cursor-pointer"
+          onClick={() => {
+            setForm(() => false);
+          }}
+        >
+          <XIcon height={20} width={20} />
+        </div>
         <form method="POST" onSubmit={handleSubmit}>
           <div className="input-field">
             <label htmlFor="name" className="form-label">
