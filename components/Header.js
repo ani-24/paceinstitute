@@ -38,7 +38,7 @@ const Header = () => {
                 />
               </a>
             </Link>
-            <ul className="hidden list-none md:space-x-5 lg:flex">
+            <ul className="hidden list-none md:space-x-5 xl:flex">
               <li className="navItem">
                 <Link href="/">
                   <a
@@ -128,12 +128,17 @@ const Header = () => {
               </li>
               <li className="navItem">
                 <Link href="/books">
-                  <a className={`navLink`}>Books</a>
+                  <a className={`navLink`}>Correct your English (book)</a>
+                </Link>
+              </li>
+              <li className="navItem">
+                <Link href="https://www.commerceclasses.co.in/">
+                  <a className={`navLink`}>Pace Commerce</a>
                 </Link>
               </li>
             </ul>
             <div
-              className="relative w-6 h-5 flex flex-col justify-between -translate-x-4 before:absolute before:h-14 before:w-14 before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:border before:border-gray-400 before:rounded-full lg:hidden"
+              className="relative w-6 h-5 flex flex-col justify-between -translate-x-4 before:absolute before:h-14 before:w-14 before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:border before:border-gray-400 before:rounded-full xl:hidden"
               onClick={() => setHidden(false)}
             >
               <div className="bar"></div>
@@ -216,7 +221,14 @@ const Header = () => {
           <li>
             <Link href="/books">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
-                Books
+                Correct your English (book)
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/https://www.commerceclasses.co.in/">
+              <a className="sidenav-link" onClick={() => setHidden(true)}>
+                Pace Commerce
               </a>
             </Link>
           </li>
