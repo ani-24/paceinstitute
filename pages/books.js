@@ -13,6 +13,7 @@ const books = () => {
             <Image
               src={BookCover}
               priority
+              loading="eager"
               alt="a book cover having title Correct your english and a happy and professional educator"
             />
           </div>
