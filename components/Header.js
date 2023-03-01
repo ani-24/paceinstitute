@@ -113,20 +113,6 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/study-material">
-                  <a
-                    className={`navLink
-                      ${
-                        router.pathname === "/study-material"
-                          ? "text-primary"
-                          : ""
-                      }`}
-                  >
-                    Study Material
-                  </a>
-                </Link>
-              </li>
-              <li className="navItem">
                 <Link href="/books">
                   <a className={`navLink`}>Correct your English (book)</a>
                 </Link>
@@ -208,13 +194,6 @@ const Header = () => {
             <Link href="/admission-details">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
                 Admission Details
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/study-material">
-              <a className="sidenav-link" onClick={() => setHidden(true)}>
-                Study Material
               </a>
             </Link>
           </li>
