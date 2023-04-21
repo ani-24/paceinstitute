@@ -99,16 +99,16 @@ const Header = () => {
                 </Link>
               </li>
               <li className="navItem">
-                <Link href="/admission-details">
+                <Link href="/admission-process">
                   <a
                     className={`navLink
                       ${
-                        router.pathname === "/admission-details"
+                        router.pathname === "/admission-process"
                           ? "text-primary"
                           : ""
                       }`}
                   >
-                    Admission Details
+                    Admission Process
                   </a>
                 </Link>
               </li>
@@ -191,9 +191,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/admission-details">
+            <Link href="/admission-process">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
-                Admission Details
+                Admission Process
               </a>
             </Link>
           </li>
@@ -205,7 +205,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/https://www.commerceclasses.co.in/">
+            <Link href="https://www.commerceclasses.co.in/">
               <a className="sidenav-link" onClick={() => setHidden(true)}>
                 Pace Commerce
               </a>

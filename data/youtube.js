@@ -1,11 +1,11 @@
 const youtube = [
   {
-    title: "Develop concept of grammar at PACE Institute",
-    link: "https://youtu.be/K1USSRBF2_8",
+    title: "Guaranteed English language development to all regular students",
+    link: "https://youtu.be/w_6gNUom5Ag",
   },
   {
-    title: "Complete Personality development at PACE Institute.",
-    link: "https://youtu.be/jFFEeyJ1iXI",
+    title: "Students' Review",
+    link: "https://youtu.be/n84VjVuDZQU",
   },
 ];
 

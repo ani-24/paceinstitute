@@ -83,13 +83,6 @@ const Testimonial = () => {
 export default function Home() {
   const titleRef = useRef(null);
   useEffect(() => {
-    // let ctx = gsap.context(() => {
-    //   gsap.to(".title", {
-    //     y: 100,
-    //   });
-    // }, titleRef);
-
-    // return () => ctx.revert();
     gsap.from(titleRef, {
       y: 100,
     });

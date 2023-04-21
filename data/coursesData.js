@@ -106,6 +106,10 @@ const coursesData = [
     duration: "(as per requirement)",
     price: "(variable)",
   },
+  {
+    title: "Commerce Classes for Class 11 & 12",
+    items: [],
+  },
 ];
 
 export default coursesData;

@@ -8,21 +8,15 @@ const Footer = () => {
         <div className="container grid md:grid-cols-2 xl:grid-cols-4 gap-y-8 gap-x-4">
           <div className="px-8 leading-loose">
             <h2 className="footer-title">Address</h2>
-            <h3>Main Centre with Exclusive Facilities:</h3>
             <p className="mb-4">
-              PACE tower, opposite Jyoti Raj complex, 90 feet Road, Kankarbagh,
-              Patna. 800020
+              PACE tower, opposite Jyoti Raj complex, Near Metro Pillar No. 31,
+              90 feet Road, Kankarbagh, Patna. 800020
             </p>
             <iframe
               className="mb-4 max-w-full lg:w-[320px] aspect-video"
               title="Address 1"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14394.130711601798!2d85.157266!3d25.58721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf97f67e31741abb0!2sPACE%20Institute%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1628132403903!5m2!1sen!2sin"
             ></iframe>
-            <h3 className="mt-4">Our Branch:</h3>
-            <p className="mb-4">
-              1st floor , Jagdamba Towers, Sahdeo Mahto marg, Boring Road,
-              Patna-800001
-            </p>
           </div>
           <div className="px-8 leading-loose">
             <h2 className="footer-title">Quick Links</h2>
