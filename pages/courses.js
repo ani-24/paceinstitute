@@ -28,21 +28,36 @@ const courses = () => {
             >
               <div className="p-8 bg-bg-100 flex-grow border-b border-b-white/5">
                 <h2 className="mb-8 text-2xl">{course.title}</h2>
-                <div className="course-desc text-sm">
-                  <p>Online or Offline whatever students prefer</p>
-                  <p>Only 20 students in a batch</p>
-                  <ul>
-                    {course.items.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                  <p>
-                    The full training is under the guidance of{" "}
-                    <strong>Mr. Pratap Manish</strong> (IIM alumni with more
-                    than 15 years of experience in multiple countries).
-                  </p>
-                  <p>Fee to be paid at the time of admission.</p>
-                </div>
+                {!course.commerce ? (
+                  <>
+                    <div className="course-desc text-sm">
+                      <p>Online or Offline whatever students prefer</p>
+                      <p>Only 20 students in a batch</p>
+                      <ul>
+                        {course.items?.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
+                      <p>
+                        The full training is under the guidance of{" "}
+                        <strong>Mr. Pratap Manish</strong> (IIM alumni with more
+                        than 15 years of experience in multiple countries).
+                      </p>
+                      <p>Fee to be paid at the time of admission.</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="mb-5">
+                      The teaching is based on NCERT book and D K Goel
+                    </p>
+                    <ul className="list-disc ml-4">
+                      {course.items?.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
               <div className="p-4 bg-bg-100/50 flex justify-between items-center flex-wrap gap-2">
                 <div className="p-3 rounded-md bg-bg-100 shadow-lg">

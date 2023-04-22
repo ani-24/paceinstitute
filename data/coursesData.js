@@ -108,7 +108,10 @@ const coursesData = [
   },
   {
     title: "Commerce Classes for Class 11 & 12",
-    items: [],
+    commerce: true,
+    duration: "One Year",
+    price: "15000",
+    items: ["Accounts", "Economics", "Business studies"],
   },
 ];
 
