@@ -2,7 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import { PlayIcon } from "@heroicons/react/outline";
+import { PlayIcon, UserCircleIcon } from "@heroicons/react/outline";
+import { UserPlusIcon } from "@heroicons/react/outline";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -125,12 +126,24 @@ export default function Home() {
               regions and professional contexts such as science, navigation and
               law
             </p>
-            <Link href="https://www.youtube.com/PratapManishPACEInstitute">
-              <a className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary">
-                <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
-                Let&apos;s get started
-              </a>
-            </Link>
+            <div className="flex gap-5 flex-wrap justify-center lg:justify-start">
+              <Link href="/admission-process">
+                <a className="text-sm inline-flex items-center border-2 border-primary px-4 py-2 rounded-full text-bg bg-primary transition duration-300 ease-out hover:bg-transparent hover:transform hover:scale-90 hover:text-primary uppercase font-bold">
+                  <UserCircleIcon
+                    height={20}
+                    width={20}
+                    className="inline mr-2"
+                  />{" "}
+                  Get admission
+                </a>
+              </Link>
+              <Link href="https://www.youtube.com/PratapManishPACEInstitute">
+                <a className="text-sm inline-flex items-center border border-primary px-4 py-2 rounded-full text-primary bg-transparent transition delay-100 duration-300 ease-out before:w-full before:h-full before:bg-primary before:absolute before:left-0 before:top-0 overflow-hidden before:-z-10 before:scale-x-0 hover:before:scale-x-100 before:duration-500 before:origin-left before:ease-[cubic-bezier(.48,.06,.84,.51)] relative  hover:transform hover:scale-90 hover:text-bg uppercase font-semibold">
+                  <PlayIcon height={20} width={20} className="inline mr-2" />{" "}
+                  Let&apos;s get started
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
