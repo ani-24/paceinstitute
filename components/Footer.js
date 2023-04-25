@@ -52,11 +52,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/study-material">
-                  <a className="footer-link">Study Material</a>
-                </Link>
-              </li>
-              <li>
                 <Link href="/books">
                   <a className="footer-link">Books</a>
                 </Link>
