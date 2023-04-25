@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pace Institute | Best English Institite in Patna</title>
+        <title>Pace Institute | Best English classes in Patna</title>
         <meta
           name="description"
           content="PACE Institute is the leading Institute for English language and personality development in the eastern part of India. It has won many awards for its expert training programs in spoken English, communication skill, interview training, etc. It has mentored thousands of students and helped them to be the part of this global world. Many students have successfully competed in the competitions and many of them have settled abroad. Students interested to go to America and Australia have an added advantage to join PACE Institute. The regional head office is situated in Kankarbagh Patna. Learning English language requires a good environment an practice of speaking writing listening and reading. At PACE, students are provided good environment of learning."
