@@ -2,7 +2,7 @@ const testimonial = [
   {
     name: "Aniket Kumar",
     feedback:
-      "A number of practice sessions along with the daily group discussions and perfect grammar explaination turned to be very helpful in my fluency in English and I can see visibile progress in me. I can also not forget to mention the personality development lectures that was the cherry on cake. Thanks to PACE Institute!",
+      "A number of practice sessions along with the daily group discussions and perfect grammar explainations turned to be very helpful in my fluency in English and I can see visibile progress in me. I can also not forget to mention the personality development lectures that was the cherry on cake. Thanks to PACE Institute!",
   },
   {
     name: "Protyusha Mukharjee",
